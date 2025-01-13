@@ -1,0 +1,42 @@
+[
+  {
+    "id": "J1",
+    "Name": "Rahmenproduktion",
+    "Lieferfrist": "2025-01-20",
+    "Priorität": "H",
+    "frühesterStarttermin": "2025-01-10",
+    "benötigteEndproduktmenge": 100
+  },
+  {
+    "id": "J2",
+    "Name": "Lackierung",
+    "Lieferfrist": "2025-01-25",
+    "Priorität": "M",
+    "frühesterStarttermin": "2025-01-12",
+    "benötigteEndproduktmenge": 100
+  },
+  {
+    "id": "J3",
+    "Name": "Montage",
+    "Lieferfrist": "2025-01-30",
+    "Priorität": "L",
+    "frühesterStarttermin": "2025-01-15",
+    "benötigteEndproduktmenge": 100
+  },
+  {
+    "id": "J4",
+    "Name": "Prüfung",
+    "Lieferfrist": "2025-02-05",
+    "Priorität": "M",
+    "frühesterStarttermin": "2025-01-28",
+    "benötigteEndproduktmenge": 100
+  },
+  {
+    "id": "J5",
+    "Name": "Verpackung",
+    "Lieferfrist": "2025-02-10",
+    "Priorität": "L",
+    "frühesterStarttermin": "2025-02-01",
+    "benötigteEndproduktmenge": 100
+  }
+]

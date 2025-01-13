@@ -1,0 +1,32 @@
+[
+  {
+    "id": "MT1",
+    "Name": "Stahl",
+    "materialspezifischeAnlieferzeit": 60,
+    "Kosten": 25
+  },
+  {
+    "id": "MT2",
+    "Name": "Rahmen",
+    "materialspezifischeAnlieferzeit": 90,
+    "Kosten": 50
+  },
+  {
+    "id": "MT3",
+    "Name": "Farbe",
+    "materialspezifischeAnlieferzeit": 30,
+    "Kosten": 10
+  },
+  {
+    "id": "MT4",
+    "Name": "Schrauben",
+    "materialspezifischeAnlieferzeit": 20,
+    "Kosten": 5
+  },
+  {
+    "id": "MT5",
+    "Name": "Verpackungskarton",
+    "materialspezifischeAnlieferzeit": 10,
+    "Kosten": 3
+  }
+]

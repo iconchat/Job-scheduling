@@ -1,0 +1,62 @@
+[
+  {
+    "id": "O1",
+    "Name": "Schweißen",
+    "Materialmenge": 50,
+    "Mindestlagerzeit": [{ "Operation": "Schneiden", "Material": "Stahl" }],
+    "benötigteZeit": 60,
+    "gleichzeitigeProduktion": ["Lackierung"],
+    "Predecessor": ["Schneiden"],
+    "nötigeProduktionshilfenanzahl": 2,
+    "KostenProZeiteinheit": 10,
+    "OutputMenge": 100
+  },
+  {
+    "id": "O2",
+    "Name": "Schneiden",
+    "Materialmenge": 30,
+    "Mindestlagerzeit": [],
+    "benötigteZeit": 45,
+    "gleichzeitigeProduktion": [],
+    "Predecessor": [],
+    "nötigeProduktionshilfenanzahl": 1,
+    "KostenProZeiteinheit": 8,
+    "OutputMenge": 150
+  },
+  {
+    "id": "O3",
+    "Name": "Lackieren",
+    "Materialmenge": 20,
+    "Mindestlagerzeit": [{ "Operation": "Schweißen", "Material": "Rahmen" }],
+    "benötigteZeit": 30,
+    "gleichzeitigeProduktion": [],
+    "Predecessor": ["Schweißen"],
+    "nötigeProduktionshilfenanzahl": 3,
+    "KostenProZeiteinheit": 15,
+    "OutputMenge": 100
+  },
+  {
+    "id": "O4",
+    "Name": "Montieren",
+    "Materialmenge": 40,
+    "Mindestlagerzeit": [],
+    "benötigteZeit": 90,
+    "gleichzeitigeProduktion": [],
+    "Predecessor": ["Lackieren"],
+    "nötigeProduktionshilfenanzahl": 4,
+    "KostenProZeiteinheit": 12,
+    "OutputMenge": 100
+  },
+  {
+    "id": "O5",
+    "Name": "Verpacken",
+    "Materialmenge": 10,
+    "Mindestlagerzeit": [],
+    "benötigteZeit": 20,
+    "gleichzeitigeProduktion": [],
+    "Predecessor": ["Montieren"],
+    "nötigeProduktionshilfenanzahl": 1,
+    "KostenProZeiteinheit": 5,
+    "OutputMenge": 100
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "P1",
+    "Name": "Schweißroboter",
+    "Typ": "Automatisch",
+    "VerfügbareMenge": 3,
+    "Kosten": 2000
+  },
+  {
+    "id": "P2",
+    "Name": "Lackierpistole",
+    "Typ": "Manuell",
+    "VerfügbareMenge": 10,
+    "Kosten": 500
+  },
+  {
+    "id": "P3",
+    "Name": "Montagetisch",
+    "Typ": "Stationär",
+    "VerfügbareMenge": 5,
+    "Kosten": 150
+  },
+  {
+    "id": "P4",
+    "Name": "Verpackungsgerät",
+    "Typ": "Automatisch",
+    "VerfügbareMenge": 2,
+    "Kosten": 3000
+  },
+  {
+    "id": "P5",
+    "Name": "Prüfgerät",
+    "Typ": "Manuell",
+    "VerfügbareMenge": 7,
+    "Kosten": 1000
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "B1",
+    "Maschinenname": "Schweißmaschine",
+    "Dauer": 30,
+    "Kosten": 100
+  },
+  {
+    "id": "B2",
+    "Maschinenname": "Schneidemaschine",
+    "Dauer": 20,
+    "Kosten": 80
+  },
+  {
+    "id": "B3",
+    "Maschinenname": "Lackierstation",
+    "Dauer": 40,
+    "Kosten": 120
+  },
+  {
+    "id": "B4",
+    "Maschinenname": "Montagemaschine",
+    "Dauer": 60,
+    "Kosten": 150
+  },
+  {
+    "id": "B5",
+    "Maschinenname": "Verpackungsmaschine",
+    "Dauer": 15,
+    "Kosten": 50
+  }
+]

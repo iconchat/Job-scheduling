@@ -1,0 +1,46 @@
+[
+  {
+    "id": "M1",
+    "Name": "Schweißmaschine",
+    "Wartungszeit": 120,
+    "Wartungszeitkonto": 500,
+    "fertigungsfrequenz": [{ "Operation": "Schweißen", "Material": "Stahl" }],
+    "KostenProZeiteinheit": 20
+  },
+  {
+    "id": "M2",
+    "Name": "Schneidemaschine",
+    "Wartungszeit": 60,
+    "Wartungszeitkonto": 300,
+    "fertigungsfrequenz": [{ "Operation": "Schneiden", "Material": "Stahl" }],
+    "KostenProZeiteinheit": 15
+  },
+  {
+    "id": "M3",
+    "Name": "Lackierstation",
+    "Wartungszeit": 90,
+    "Wartungszeitkonto": 400,
+    "fertigungsfrequenz": [{ "Operation": "Lackieren", "Material": "Farbe" }],
+    "KostenProZeiteinheit": 25
+  },
+  {
+    "id": "M4",
+    "Name": "Montagemaschine",
+    "Wartungszeit": 100,
+    "Wartungszeitkonto": 350,
+    "fertigungsfrequenz": [
+      { "Operation": "Montieren", "Material": "Schrauben" }
+    ],
+    "KostenProZeiteinheit": 18
+  },
+  {
+    "id": "M5",
+    "Name": "Verpackungsmaschine",
+    "Wartungszeit": 50,
+    "Wartungszeitkonto": 200,
+    "fertigungsfrequenz": [
+      { "Operation": "Verpacken", "Material": "Verpackungskarton" }
+    ],
+    "KostenProZeiteinheit": 10
+  }
+]
