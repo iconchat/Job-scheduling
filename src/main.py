@@ -5,6 +5,8 @@ from scheduling.utils.data_converter import DataConverter
 from scheduling.utils.json_utils import load_json_file
 import json
 from pathlib import Path
+from models.scheduler_transformer import SchedulingTransformer
+import torch
 
 def save_schedule_to_json(schedule, filename="result.json"):
     """Speichert den Zeitplan als JSON-Datei."""
@@ -71,7 +73,7 @@ def print_schedule_table(schedule):
 
 def main():
     try:
-        # Lade die JSON-Daten
+        # Lade die Daten
         raw_data = {
             "buffer": load_json_file("buffer.json"),
             "job": load_json_file("job.json"),
@@ -81,7 +83,18 @@ def main():
             "material": load_json_file("material.json")
         }
 
-        print(json.dumps(raw_data, indent=4))
+        print("Raw Data:", raw_data)
+
+        # Initialisiere den Transformer
+        model = SchedulingTransformer()
+        
+        # Bereite die Daten vor
+        jobs_tensor, machines_tensor, operations_tensor = model.prepare_data(raw_data)
+        
+        # Forward Pass durch den Transformer
+        scheduling_priorities = model(jobs_tensor, machines_tensor, operations_tensor)
+        
+        print("Scheduling Priorities:", scheduling_priorities)
 
         # Konvertiere die Daten in Objekte
         jobs = DataConverter.convert_jobs(raw_data["job"])

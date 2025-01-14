@@ -3,29 +3,29 @@
         "job_name": "Lackierung",
         "operation_name": "Schneiden",
         "machine_name": "Schneidemaschine",
-        "start_time": "2025-01-13 15:09",
-        "end_time": "2025-01-13 15:54"
+        "start_time": "2025-01-14 19:38",
+        "end_time": "2025-01-14 20:23"
     },
     {
         "job_name": "Lackierung",
         "operation_name": "Schweißen",
         "machine_name": "Schweißmaschine",
-        "start_time": "2025-01-13 15:54",
-        "end_time": "2025-01-13 16:54"
+        "start_time": "2025-01-14 20:23",
+        "end_time": "2025-01-14 21:23"
     },
     {
         "job_name": "Rahmenproduktion",
         "operation_name": "Schneiden",
         "machine_name": "Schneidemaschine",
-        "start_time": "2025-01-13 16:09",
-        "end_time": "2025-01-13 16:54"
+        "start_time": "2025-01-14 20:38",
+        "end_time": "2025-01-14 21:23"
     },
     {
         "job_name": "Lackierung",
         "operation_name": "Lackieren",
         "machine_name": "Lackierstation",
-        "start_time": "2025-01-13 16:54",
-        "end_time": "2025-01-13 17:24"
+        "start_time": "2025-01-14 21:23",
+        "end_time": "2025-01-14 21:53"
     },
     {
         "job_name": "Montage",

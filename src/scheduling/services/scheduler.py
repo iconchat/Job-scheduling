@@ -172,6 +172,7 @@ class ProductionScheduler:
         # Sortiere Jobs nach Priorität (H > M > L) und Deadline
         sorted_jobs = sorted(self.jobs, 
                            key=lambda x: (ord('H') - ord(x.priority), x.deadline))
+
         
         for job in sorted_jobs:
             # Finde die Startoperation für den Job
