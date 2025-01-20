@@ -83,7 +83,11 @@ def main():
             "material": load_json_file("material.json")
         }
 
-        print("Raw Data:", raw_data)
+        # print raw_data formatted
+        print("Raw Data:")
+        print(json.dumps(raw_data, indent=4, ensure_ascii=False))
+
+        return
 
         # Initialisiere den Transformer
         model = SchedulingTransformer()

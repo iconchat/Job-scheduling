@@ -1,0 +1,294 @@
+{
+    "buffer": [
+        {
+            "id": "B1",
+            "Maschinenname": "Schweißmaschine",
+            "Dauer": 30,
+            "Kosten": 100
+        },
+        {
+            "id": "B2",
+            "Maschinenname": "Schneidemaschine",
+            "Dauer": 20,
+            "Kosten": 80
+        },
+        {
+            "id": "B3",
+            "Maschinenname": "Lackierstation",
+            "Dauer": 40,
+            "Kosten": 120
+        },
+        {
+            "id": "B4",
+            "Maschinenname": "Montagemaschine",
+            "Dauer": 60,
+            "Kosten": 150
+        },
+        {
+            "id": "B5",
+            "Maschinenname": "Verpackungsmaschine",
+            "Dauer": 15,
+            "Kosten": 50
+        }
+    ],
+    "job": [
+        {
+            "id": "J1",
+            "Name": "Rahmenproduktion",
+            "Lieferfrist": "2025-01-20",
+            "Priorität": "H",
+            "frühesterStarttermin": "2025-01-10",
+            "benötigteEndproduktmenge": 100
+        },
+        {
+            "id": "J2",
+            "Name": "Lackierung",
+            "Lieferfrist": "2025-01-25",
+            "Priorität": "M",
+            "frühesterStarttermin": "2025-01-12",
+            "benötigteEndproduktmenge": 100
+        },
+        {
+            "id": "J3",
+            "Name": "Montage",
+            "Lieferfrist": "2025-01-30",
+            "Priorität": "L",
+            "frühesterStarttermin": "2025-01-15",
+            "benötigteEndproduktmenge": 100
+        },
+        {
+            "id": "J4",
+            "Name": "Prüfung",
+            "Lieferfrist": "2025-02-05",
+            "Priorität": "M",
+            "frühesterStarttermin": "2025-01-28",
+            "benötigteEndproduktmenge": 100
+        },
+        {
+            "id": "J5",
+            "Name": "Verpackung",
+            "Lieferfrist": "2025-02-10",
+            "Priorität": "L",
+            "frühesterStarttermin": "2025-02-01",
+            "benötigteEndproduktmenge": 100
+        }
+    ],
+    "maschine": [
+        {
+            "id": "M1",
+            "Name": "Schweißmaschine",
+            "Wartungszeit": 120,
+            "Wartungszeitkonto": 500,
+            "fertigungsfrequenz": [
+                {
+                    "Operation": "Schweißen",
+                    "Material": "Stahl"
+                }
+            ],
+            "KostenProZeiteinheit": 20
+        },
+        {
+            "id": "M2",
+            "Name": "Schneidemaschine",
+            "Wartungszeit": 60,
+            "Wartungszeitkonto": 300,
+            "fertigungsfrequenz": [
+                {
+                    "Operation": "Schneiden",
+                    "Material": "Stahl"
+                }
+            ],
+            "KostenProZeiteinheit": 15
+        },
+        {
+            "id": "M3",
+            "Name": "Lackierstation",
+            "Wartungszeit": 90,
+            "Wartungszeitkonto": 400,
+            "fertigungsfrequenz": [
+                {
+                    "Operation": "Lackieren",
+                    "Material": "Farbe"
+                }
+            ],
+            "KostenProZeiteinheit": 25
+        },
+        {
+            "id": "M4",
+            "Name": "Montagemaschine",
+            "Wartungszeit": 100,
+            "Wartungszeitkonto": 350,
+            "fertigungsfrequenz": [
+                {
+                    "Operation": "Montieren",
+                    "Material": "Schrauben"
+                }
+            ],
+            "KostenProZeiteinheit": 18
+        },
+        {
+            "id": "M5",
+            "Name": "Verpackungsmaschine",
+            "Wartungszeit": 50,
+            "Wartungszeitkonto": 200,
+            "fertigungsfrequenz": [
+                {
+                    "Operation": "Verpacken",
+                    "Material": "Verpackungskarton"
+                }
+            ],
+            "KostenProZeiteinheit": 10
+        }
+    ],
+    "operation": [
+        {
+            "id": "O1",
+            "Name": "Schweißen",
+            "Materialmenge": 50,
+            "Mindestlagerzeit": [
+                {
+                    "Operation": "Schneiden",
+                    "Material": "Stahl"
+                }
+            ],
+            "benötigteZeit": 60,
+            "gleichzeitigeProduktion": [
+                "Lackierung"
+            ],
+            "Predecessor": [
+                "Schneiden"
+            ],
+            "nötigeProduktionshilfenanzahl": 2,
+            "KostenProZeiteinheit": 10,
+            "OutputMenge": 100
+        },
+        {
+            "id": "O2",
+            "Name": "Schneiden",
+            "Materialmenge": 30,
+            "Mindestlagerzeit": [],
+            "benötigteZeit": 45,
+            "gleichzeitigeProduktion": [],
+            "Predecessor": [],
+            "nötigeProduktionshilfenanzahl": 1,
+            "KostenProZeiteinheit": 8,
+            "OutputMenge": 150
+        },
+        {
+            "id": "O3",
+            "Name": "Lackieren",
+            "Materialmenge": 20,
+            "Mindestlagerzeit": [
+                {
+                    "Operation": "Schweißen",
+                    "Material": "Rahmen"
+                }
+            ],
+            "benötigteZeit": 30,
+            "gleichzeitigeProduktion": [],
+            "Predecessor": [
+                "Schweißen"
+            ],
+            "nötigeProduktionshilfenanzahl": 3,
+            "KostenProZeiteinheit": 15,
+            "OutputMenge": 100
+        },
+        {
+            "id": "O4",
+            "Name": "Montieren",
+            "Materialmenge": 40,
+            "Mindestlagerzeit": [],
+            "benötigteZeit": 90,
+            "gleichzeitigeProduktion": [],
+            "Predecessor": [
+                "Lackieren"
+            ],
+            "nötigeProduktionshilfenanzahl": 4,
+            "KostenProZeiteinheit": 12,
+            "OutputMenge": 100
+        },
+        {
+            "id": "O5",
+            "Name": "Verpacken",
+            "Materialmenge": 10,
+            "Mindestlagerzeit": [],
+            "benötigteZeit": 20,
+            "gleichzeitigeProduktion": [],
+            "Predecessor": [
+                "Montieren"
+            ],
+            "nötigeProduktionshilfenanzahl": 1,
+            "KostenProZeiteinheit": 5,
+            "OutputMenge": 100
+        }
+    ],
+    "produktionshilfe": [
+        {
+            "id": "P1",
+            "Name": "Schweißroboter",
+            "Typ": "Automatisch",
+            "VerfügbareMenge": 3,
+            "Kosten": 2000
+        },
+        {
+            "id": "P2",
+            "Name": "Lackierpistole",
+            "Typ": "Manuell",
+            "VerfügbareMenge": 10,
+            "Kosten": 500
+        },
+        {
+            "id": "P3",
+            "Name": "Montagetisch",
+            "Typ": "Stationär",
+            "VerfügbareMenge": 5,
+            "Kosten": 150
+        },
+        {
+            "id": "P4",
+            "Name": "Verpackungsgerät",
+            "Typ": "Automatisch",
+            "VerfügbareMenge": 2,
+            "Kosten": 3000
+        },
+        {
+            "id": "P5",
+            "Name": "Prüfgerät",
+            "Typ": "Manuell",
+            "VerfügbareMenge": 7,
+            "Kosten": 1000
+        }
+    ],
+    "material": [
+        {
+            "id": "MT1",
+            "Name": "Stahl",
+            "materialspezifischeAnlieferzeit": 60,
+            "Kosten": 25
+        },
+        {
+            "id": "MT2",
+            "Name": "Rahmen",
+            "materialspezifischeAnlieferzeit": 90,
+            "Kosten": 50
+        },
+        {
+            "id": "MT3",
+            "Name": "Farbe",
+            "materialspezifischeAnlieferzeit": 30,
+            "Kosten": 10
+        },
+        {
+            "id": "MT4",
+            "Name": "Schrauben",
+            "materialspezifischeAnlieferzeit": 20,
+            "Kosten": 5
+        },
+        {
+            "id": "MT5",
+            "Name": "Verpackungskarton",
+            "materialspezifischeAnlieferzeit": 10,
+            "Kosten": 3
+        }
+    ]
+}
