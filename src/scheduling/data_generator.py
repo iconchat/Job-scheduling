@@ -306,7 +306,7 @@ def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     
     generator = BicycleProductionGenerator()
-    input_datasets, output_datasets = generator.generate_dataset(100)
+    input_datasets, output_datasets = generator.generate_dataset(1000)
     
     # Save input data
     input_file = os.path.join(script_dir, 'data', 'scheduling_input_data.json')
